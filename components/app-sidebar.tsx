@@ -10,6 +10,7 @@ import {
   Settings2,
   Command,
   GalleryVerticalEnd,
+  Cloud,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
@@ -63,6 +64,13 @@ const data = {
           url: "/playground/weather-widget",
         }
       ],
+    },
+    {
+      title: "Weather",
+      url: "/weather",
+      icon: Cloud,
+      isActive: false,
+      items: [],
     },
     {
       title: "Theme Editor",

@@ -11,4 +11,115 @@ html[data-depth-effect="1"] [data-slot="card"] {
 html[data-noise-effect="1"] .auto-noise {
   background-image: url('/noise.png');
   background-repeat: repeat;
+}
+
+/* Погодні анімації для віджета */
+@keyframes rain {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(120%);
+  }
+}
+
+@keyframes snow {
+  0% {
+    transform: translateY(-10px) translateX(0);
+  }
+  25% {
+    transform: translateY(25%) translateX(5px);
+  }
+  50% {
+    transform: translateY(50%) translateX(-5px);
+  }
+  75% {
+    transform: translateY(75%) translateX(5px);
+  }
+  100% {
+    transform: translateY(120%) translateX(-5px);
+  }
+}
+
+@keyframes lightning {
+  0%, 85%, 100% {
+    opacity: 0;
+  }
+  90%, 95% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  25% {
+    transform: translateY(-5px) translateX(5px);
+  }
+  50% {
+    transform: translateY(-10px) translateX(0px);
+  }
+  75% {
+    transform: translateY(-5px) translateX(-5px);
+  }
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes sunray {
+  0%, 100% {
+    opacity: 0.7;
+    transform-origin: right;
+  }
+  50% {
+    opacity: 0.3;
+    transform-origin: right;
+  }
+}
+
+.animate-rain {
+  animation: rain linear infinite;
+}
+
+.animate-snow {
+  animation: snow linear infinite;
+}
+
+.animate-lightning {
+  animation: lightning 7s infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+.animate-sunray {
+  animation: sunray 3s ease-in-out infinite;
 } 

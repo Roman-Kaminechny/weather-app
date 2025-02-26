@@ -1,0 +1,1 @@
+export { default as SimpleWeatherWidget } from './simple-weather-widget' 
