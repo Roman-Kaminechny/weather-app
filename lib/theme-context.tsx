@@ -207,7 +207,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     if (theme.shadows) {
       Object.entries(theme.shadows).forEach(([key, value]) => {
         const varName = key === 'DEFAULT' ? '--shadow' : `--shadow-${key}`;
-        root.style.setProperty(varName, value);
+        if (value !== undefined) {
+          root.style.setProperty(varName, value);
+        }
       });
     }
     
