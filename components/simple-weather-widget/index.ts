@@ -1,1 +1,2 @@
-export { default as SimpleWeatherWidget } from './simple-weather-widget' 
+import SimpleWeatherWidget from './simple-weather-widget'
+export { SimpleWeatherWidget } 
